@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,165 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.div-research{
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 30px 1px 20px 1px gray;
+  position: fixed;
+  width: 1348px;
+  height: 100px;
+  background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.welcome{margin-left: 30px; margin-top: 25px;}
+.research{
+    height: 30px;
+    width: 300px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-left: 90px;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-size: 17px;}
+
+.list-form{
+  padding-top: 110px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  
+  }
+
+  .card-form{
+    margin-left: 30px;
+    margin-top: 30px; 
+    border: solid;
+    border-color: lightslategray;
+    border-width: 0.01px;
+    border-radius: 25px;
+    width: 300px;
+    height: 500px;
+    box-shadow: 30px 30px 30px 30px grey;
+
+    background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  .title-form{
+    text-align: center;
+     margin-top: 3px;
+     margin-bottom: 5px;
+    }
+    .trailer-form{
+      margin-left: 350px;
+    }
+    
+  .image-form {
+    border-radius: 20px 3px 10px 200px;
+    box-shadow: 10px 30px 20px -10px grey;
+    height: 350px;
+    width: 300px;}
+  
+
+  .div-date-star{display: flex; margin-top: -10px;}
+
+  .date-form{margin-left: 20px}
+
+  .rate-form{margin-left: 30px}
+  
+  .gold-star{color: gold; font-size: 22px}
+
+  .black-star{color: black; font-size: 22px}
+
+
+
+.buttDelMod{
+ height:30px;
+  width: 70px;
+  margin-left: 55px;
+  box-shadow: 1px 1px 3px 1px grey;
+  border:  none;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-size: 17px;
+
+}
+
+.btn-open-modal-form{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 650px;
+  height: 50px;
+  width: 130px;
+  box-shadow: 1px 1px 3px 1px grey;
+  border-color:  grey;
+  border-radius: 10px;
+  font-family: 'Roboto';
+  font-size: 22px;
+  
+}
+.form-form{
+height: 340px;
+width: 330px;
+margin-left: 15px;
+
+}
+.label-form{
+  font-family: 'Roboto';
+  font-size: 21px;
+  margin-top: 20px;
+  color: rgb(85, 81, 81);
+}
+.input-form{
+  height: 30px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-size: 17px
+}
+.input-date-form{
+  height: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-size: 17px
+}
+.btn-modal-form{
+  height:30px;
+  width: 70px;
+  margin-left: 55px;
+  box-shadow: 1px 1px 3px 1px grey;
+  border:  none;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-size: 17px;
+  margin-top: 10px;
+}
+#rateresearch{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.btn-card-form{
+  display: flex;
+}
+.back-to-home{
+  height:30px;
+  width: 170px;
+  margin-left: 610px;
+  box-shadow: 1px 1px 3px 1px grey;
+  border:  none;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-size: 17px;
+  margin-top: 10px;
+
 }

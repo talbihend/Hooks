@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { Route,  BrowserRouter as Router, Routes } from 'react-router-dom';
+import AddNewMovie from './Components/AddNewMovie';
+import { moviesData } from './Components/Data';
+import Detail from './Components/Detail';
+import Filter from './Components/Filter';
+import MovieList from './Components/MovieList';
 
-function App() {
+const App = () => {
+  const [movies, setMovies] = useState(moviesData);
+  const handleAdd = (NewMovie) => setMovies([...movies, NewMovie]); 
+  const [searchValue, setSearchValue] = useState("");
+  const handleSearch = (e) => setSearchValue(e.target.value);
+  const [searchRating, setSearchRating] = useState(0);
+  const handleRating = (rate)=> setSearchRating(rate);
+  const handleDelete = (id) =>{ const delArr = [...movies].filter((film)=> film.id !== id); setMovies(delArr);}
+  const handleEdit = (em)=>setMovies(movies.map(el=>el.id===em.id?em:el))
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+      
+       <Routes>
+        <Route path="/" element={
+          <div>
+            <Filter handleSearch={handleSearch} handleRating={handleRating} searchValue={searchValue} searchRating={searchRating}/>
+            <MovieList handleEdit={handleEdit} handleDelete={handleDelete } list={movies.filter((mv)=> mv.title.toLowerCase().includes(searchValue.toLowerCase().trim()) && searchRating <= mv.rate)}/>
+            <AddNewMovie handleAdd={handleAdd} />
+          </div>
+        }/>
+         {/* <Route path="/info/:id" element={<Detail list={movies}/>}/> */}
+       </Routes>
+       
+      </Router>
+        
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
